@@ -223,6 +223,7 @@ namespace linq_practice
 
             var groups = customers.Where(customers => customers.Balance >= 1_000_000)
                 .GroupBy(customers => customers.Bank);
+            
             foreach (var group in groups)
             {
                 Console.WriteLine($"{group.Key} has {group.Count()} millionaires");
@@ -231,6 +232,8 @@ namespace linq_practice
                     Console.WriteLine($"{customer.Name} has ${customer.Balance}");
                 }
             };
+
+            
 
             
 
